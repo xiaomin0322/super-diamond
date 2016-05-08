@@ -26,7 +26,7 @@ super-diamond-server 安装
 5. 在conf_user表中添加用户admin，密码000000的加密值为：670b14728ad9902aecba32e22fa4f6bd, mysql脚本：
 insert into conf_user(id,USER_code,USER_NAME,PASSWORD,CREATE_TIME) values(1,'admin','admin','670b14728ad9902aecba32e22fa4f6bd',current_timestamp() );  
 commit;  
-6. 访问super-diamond-server，jetty默认端口为8090，可以在：conf/META-INF/res/jetty.properties中修改。
+6. mvn jetty:run -Pproduction . 访问super-diamond-server，jetty默认端口为8090，可以在：conf/META-INF/res/jetty.properties中修改。
 	http://localhost:8090/superdiamond
 
 super-diamond-client
